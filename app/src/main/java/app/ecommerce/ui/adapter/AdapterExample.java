@@ -14,7 +14,7 @@ import app.ecommerce.ui.R;
 import app.ecommerce.ui.model.ExampleProduct;
 import app.ecommerce.ui.utils.Tools;
 
-public class ExampleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class AdapterExample extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<ExampleProduct> items;
 
@@ -29,7 +29,7 @@ public class ExampleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         this.mOnItemClickListener = mItemClickListener;
     }
 
-    public ExampleAdapter(Context context, List<ExampleProduct> items) {
+    public AdapterExample(Context context, List<ExampleProduct> items) {
         this.items = items;
         ctx = context;
     }
@@ -52,7 +52,7 @@ public class ExampleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         RecyclerView.ViewHolder vh;
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.example_item, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_example, parent, false);
         vh = new OriginalViewHolder(v);
         return vh;
     }

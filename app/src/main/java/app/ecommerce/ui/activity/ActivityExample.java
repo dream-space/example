@@ -13,7 +13,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import app.ecommerce.ui.R;
-import app.ecommerce.ui.adapter.ExampleAdapter;
+import app.ecommerce.ui.adapter.AdapterExample;
 import app.ecommerce.ui.data.DataGenerator;
 import app.ecommerce.ui.model.ExampleProduct;
 import app.ecommerce.ui.utils.Tools;
@@ -25,12 +25,12 @@ public class ActivityExample extends AppCompatActivity {
 
     // nama variable view lowercase underscore
     RecyclerView recycler_view;
-    ExampleAdapter adapter;
+    AdapterExample adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.example_activity);
+        setContentView(R.layout.activity_example);
 
         initToolbar();
         initComponent();
@@ -63,11 +63,11 @@ public class ActivityExample extends AppCompatActivity {
         items.addAll(DataGenerator.getProducts(this));
 
         //set data and list adapter
-        adapter = new ExampleAdapter(this, items);
+        adapter = new AdapterExample(this, items);
         recycler_view.setAdapter(adapter);
 
         // on item list clicked
-        adapter.setOnItemClickListener(new ExampleAdapter.OnItemClickListener() {
+        adapter.setOnItemClickListener(new AdapterExample.OnItemClickListener() {
             @Override
             public void onItemClick(View view, ExampleProduct obj, int position) {
                 Toast.makeText(getApplicationContext(), "Item " + obj.title + " clicked", Toast.LENGTH_SHORT).show();
