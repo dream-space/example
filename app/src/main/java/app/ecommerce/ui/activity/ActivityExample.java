@@ -21,7 +21,7 @@ import app.ecommerce.ui.utils.Tools;
 /**
  * Activity hanya extend ke AppCompatActivity
  */
-public class ExampleActivity extends AppCompatActivity {
+public class ActivityExample extends AppCompatActivity {
 
     // nama variable view lowercase underscore
     RecyclerView recycler_view;
